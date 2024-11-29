@@ -53,7 +53,8 @@ else:
 
         st.write("### Statistics")
         stats = st.session_state.simulation_results.describe()
-        st.write(stats)
+        #st.write(stats)
+        st.dataframe(stats, use_container_width=True)
         
         st.write("### Visualization")
 

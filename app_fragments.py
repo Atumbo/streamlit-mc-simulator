@@ -34,16 +34,21 @@ def process_step_form(process_type : str):
         if add_step:
             try:
                 if not name:
-                    st.error("Name cannot be empty.") 
+                    st.error("Name cannot be empty.")
+
                 elif name in st.session_state.process.get_names():
                     st.error("Name already exists")
+
                 else: 
                     if process_type == "Exponential":
                         st.session_state.process.insertAtEnd(ExponentialStep(name, rate))
+
                     elif process_type == "Normal":
                         st.session_state.process.insertAtEnd(NormalStep(name, mean, std_dev))
+
                     elif process_type == "Uniform":
                         st.session_state.process.insertAtEnd(UniformStep(name,lower_bound, upper_bound))
+
             except Exception as e:
                 st.exception(e)
 
