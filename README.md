@@ -9,7 +9,7 @@ This Streamlit app allows users to create and simulate processes using different
 - **Download Results**: Download the simulation results as a CSV file.
 
 ## Community Cloud Link:
-Access the app here: [www.www.fi]
+Access the app here: [https://app-mc-simulator.streamlit.app/]
 
 ## Installation:
 1. Clone the repository.
